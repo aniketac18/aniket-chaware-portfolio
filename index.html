@@ -942,16 +942,7 @@
     if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.active').forEach(ov => ov.classList.remove('active'));
   });
 
-  // Contact form — submits to Google Form silently, keeps original UI
-  const FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSfMTo7QCalkBMyvIEALQ1T_yDz54NQESP-B8az2qmdegUr-IA/formResponse';
-
-  // NOTE: Replace these entry IDs with your actual Google Form entry IDs
-  // To find them: open your form preview → F12 → search for "entry."
-  const ENTRY_NAME    = 'entry.2005620554';
-  const ENTRY_EMAIL   = 'entry.1045781291';
-  const ENTRY_PHONE   = 'entry.1166974658';
-  const ENTRY_MESSAGE = 'entry.839337160';
-
+  // Contact form — Web3Forms (works on static sites, no CORS issues)
   document.getElementById('sendBtn').addEventListener('click', () => {
     const name    = document.getElementById('fname').value.trim();
     const email   = document.getElementById('femail').value.trim();
@@ -963,28 +954,42 @@
       return;
     }
 
-    // Build form data
-    const params = new URLSearchParams();
-    params.append(ENTRY_NAME, name);
-    params.append(ENTRY_EMAIL, email);
-    params.append(ENTRY_PHONE, phone);
-    params.append(ENTRY_MESSAGE, message);
+    const btn = document.getElementById('sendBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
 
-    // Submit silently via fetch (no redirect)
-    fetch(FORM_ACTION, {
+    fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: params.toString()
-    }).then(() => {
-      document.getElementById('fname').value = '';
-      document.getElementById('femail').value = '';
-      document.getElementById('fphone').value = '';
-      document.getElementById('fmessage').value = '';
-      document.getElementById('formSuccess').style.display = 'block';
-      setTimeout(() => document.getElementById('formSuccess').style.display = 'none', 5000);
-    }).catch(() => {
-      alert('Something went wrong. Please try again.');
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key: 'e069b947-b98d-4735-bb14-e5b7995da396',
+        subject: 'New message from Portfolio — ' + name,
+        name:    name,
+        email:   email,
+        phone:   phone,
+        message: message,
+        from_name: 'Aniket Portfolio'
+      })
+    })
+    .then(r => r.json())
+    .then(data => {
+      btn.disabled = false;
+      btn.innerHTML = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:6px"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>Send Message';
+      if (data.success) {
+        document.getElementById('fname').value = '';
+        document.getElementById('femail').value = '';
+        document.getElementById('fphone').value = '';
+        document.getElementById('fmessage').value = '';
+        document.getElementById('formSuccess').style.display = 'block';
+        setTimeout(() => document.getElementById('formSuccess').style.display = 'none', 6000);
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    })
+    .catch(() => {
+      btn.disabled = false;
+      btn.innerHTML = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:6px"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>Send Message';
+      alert('Network error. Please check your connection and try again.');
     });
   });
 
