@@ -1,87 +1,143 @@
-# Aniket Chaware — Portfolio Website
+# 🚀 Aniket Chaware — Portfolio Website
 
-## What's in this zip
+[![Live Site](https://img.shields.io/badge/Live%20Site-aniketac18.github.io-8b6cf0?style=for-the-badge&logo=github)](https://aniketac18.github.io/aniket-chaware-portfolio/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aniket%20Chaware-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/aniketchaware/)
+[![GitHub](https://img.shields.io/badge/GitHub-aniketac18-181717?style=for-the-badge&logo=github)](https://github.com/aniketac18)
+
+> Personal portfolio website for **Aniket Chaware** — Data Analyst with 3+ years of experience in data governance, analytics, MIS reporting, and dashboard automation.
+
+---
+
+## 🌐 Live URL
+
+**https://aniketac18.github.io/aniket-chaware-portfolio/**
+
+---
+
+## 👤 About
+
+Results-driven **Data Analyst | Reporting Analyst | MIS Analyst | Business Analyst | Product Analyst** with 3+ years of experience in:
+- Data Governance & Quality Management
+- Inventory Reconciliation & Audit Support
+- BI Dashboarding (Power BI, Tableau, Looker Studio)
+- Python & SQL for data automation and EDA
+- Stakeholder reporting and cross-functional collaboration
+
+---
+
+## ✨ Features
+
+| Feature | Details |
+|---------|---------|
+| 🎨 **Dark / Light Theme** | Toggle via ⚙ settings button |
+| 🌟 **Cursor Glow** | Interactive radial glow that follows mouse |
+| 🔤 **Letter Hover Effect** | Each letter of the name lights up on hover |
+| 🎬 **Walk-in Intro Animation** | Avatar entry animation on page load |
+| ⏳ **Experience Timeline** | Click any role to see full responsibilities |
+| 📂 **6 Projects** | Detailed popup modals with impact metrics |
+| 🤖 **AI Assistant** | Rule-based chatbot with resume knowledge |
+| 📧 **Contact Form** | Powered by Web3Forms — real email delivery |
+| 📜 **Certifications** | With clickable credential verification links |
+| 🏷️ **Tech Stack Marquee** | Auto-scrolling logo strip |
+| 📱 **Responsive** | Works on desktop, tablet, and mobile |
+| 🔍 **SEO Ready** | Meta tags, Open Graph, JSON-LD structured data |
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:** HTML5, CSS3, Vanilla JavaScript  
+**Animations:** CSS Keyframes, IntersectionObserver, requestAnimationFrame  
+**Form:** [Web3Forms](https://web3forms.com) (serverless email)  
+**Hosting:** GitHub Pages  
+**Design:** Custom dark theme with purple/teal/pink palette  
+
+---
+
+## 📁 Project Structure
+
 ```
-index.html
-assets/
-  photo.jpg
-  Aniket_Chaware_Resume.pdf
-  figma.png, appsheet.png, appsscript.png, python.png, mysql.png,
-  tableau.png, gworkspace.png, canva.png, excel.png, powerbi.png,
-  jupyter.png, looker.png, github.png
+aniket-chaware-portfolio/
+├── index.html          ← Complete single-page website
+├── README.md           ← This file
+└── assets/
+    ├── photo.jpg                   ← Profile photo
+    ├── Aniket_Chaware_Resume.pdf   ← Downloadable resume
+    ├── python.png                  ← Tech stack logos
+    ├── mysql.png
+    ├── excel.png
+    ├── powerbi.png
+    ├── tableau.png
+    ├── gworkspace.png
+    ├── jupyter.png
+    ├── looker.png
+    ├── figma.png
+    ├── canva.png
+    ├── appsheet.png
+    ├── appsscript.png
+    └── github.png
 ```
-`index.html` links to everything in `assets/` by a relative path
-(e.g. `assets/photo.jpg`). **Keep the `assets` folder next to
-`index.html` at all times** — if you move or upload the HTML file on
-its own without that folder, the photo, resume, and logos will not
-show up. This is the standard way real websites are structured (and
-exactly how GitHub Pages / Netlify / Vercel expect it), so once
-you host the whole folder together it will work correctly.
 
-## Where to put it on your computer
-Any folder is fine, e.g.:
+---
+
+## 📂 Sections
+
+1. **Hero** — Name, role, CTA buttons, profile photo
+2. **About** — Bio, skills with animated progress bars, profile details
+3. **Tech Stack** — Auto-scrolling marquee of tools and technologies
+4. **Experience** — Timeline with clickable popup modals
+5. **Projects** — 6 real-work projects with detailed impact modals
+6. **Education & Certifications** — Degrees and verified credential links
+7. **Let's Connect** — Contact form, social links, AI Assistant
+
+---
+
+## 🚀 Run Locally
+
+No build step needed — just open the file:
+
+```bash
+# Clone the repo
+git clone https://github.com/aniketac18/aniket-chaware-portfolio.git
+
+# Open in browser
+cd aniket-chaware-portfolio
+open index.html        # Mac
+start index.html       # Windows
 ```
-D:\portfolio-website\aniket-website\index.html
-D:\portfolio-website\aniket-website\assets\...
+
+> ⚠️ Keep `index.html` and the `assets/` folder in the same directory.
+
+---
+
+## 🔄 Deploying Updates
+
+```bash
+git add index.html
+git commit -m "Your update message"
+git push
 ```
-Double-click `index.html` (or open it in Chrome/Edge/Firefox) to
-preview it locally — no server needed for that.
 
-## If you ever want to update your photo, resume, or a logo
-Just replace the matching file inside `assets/` with a new one of the
-same filename (e.g. drop in a new `assets/photo.jpg`). No HTML editing
-needed.
+GitHub Pages auto-deploys within 1–2 minutes after every push.
 
-## How to put it online (pick one — all are free)
+---
 
-### Option A: GitHub Pages (recommended, free, your own domain-like URL)
-1. Create a free GitHub account at github.com if you don't have one.
-2. Create a new repository, e.g. `aniket-portfolio`.
-3. Upload **both** `index.html` and the whole `assets` folder (GitHub's
-   web UI "Add file → Upload files" lets you drag a folder in).
-4. Go to the repo's **Settings → Pages**, set the source branch to `main`
-   and the folder to `/ (root)`, then Save.
-5. After a minute, your site will be live at:
-   `https://<your-github-username>.github.io/aniket-portfolio/`
+## 📬 Contact
 
-### Option B: Netlify (drag-and-drop, free)
-1. Go to netlify.com and sign up (free).
-2. On the dashboard, find "Deploy manually" / drag-and-drop area.
-3. Drag the **whole folder** (containing `index.html` and `assets/`)
-   into that area — not just the HTML file alone.
-4. Netlify gives you a live URL immediately (e.g. `random-name.netlify.app`).
+| Channel | Details |
+|---------|---------|
+| Email | aniketchaware184@gmail.com |
+| LinkedIn | [linkedin.com/in/aniketchaware](https://www.linkedin.com/in/aniketchaware/) |
+| GitHub | [github.com/aniketac18](https://github.com/aniketac18) |
+| Portfolio | [aniketac18.github.io/aniket-chaware-portfolio](https://aniketac18.github.io/aniket-chaware-portfolio/) |
 
-### Option C: Vercel
-Same idea as Netlify — sign up at vercel.com, "Add New Project", upload
-the folder, and it deploys instantly with a free `.vercel.app` URL.
+---
 
-### Custom domain (optional)
-If you later buy a domain (e.g. `aniketchaware.com` from Namecheap/GoDaddy),
-all three options above let you point that domain at your site for free —
-just follow the "Custom domain" instructions in whichever host you pick.
+## 📄 License
 
-## AI Assistant — how it actually works
-Click the "AI Assistant" card (or the "Chat with AI Assistant" button) to
-open a chat popup with an animated waving character. Type a question and
-it replies about Aniket's experience, skills, projects, education, or
-contact info.
+This project is open-source and available under the [MIT License](LICENSE).  
+Feel free to use it as inspiration — give credit if you do! 🙌
 
-**Important honesty note:** this is a *rule-based* assistant, not a live
-LLM. It runs entirely in the visitor's browser and matches keywords in
-their question against a small knowledge base built from Aniket's resume
-— there's no real AI model, network call, or backend involved. A genuinely
-LLM-powered assistant would need a server to hold an API key (a plain
-HTML file can't safely store one), so this static site can't call a real
-AI service without that extra piece of infrastructure. If you want a true
-LLM-backed version later, the next step would be a small backend
-(e.g. a serverless function) that calls an AI API and the site talks to
-that instead — happy to help set that up when you're ready.
+---
 
-## Other notes
-- The "Send a Message" form doesn't send anywhere yet — it's a visual demo.
-  Wire it to Formspree, Web3Forms, or EmailJS (a few minutes of setup) if you
-  want real messages to reach your inbox — happy to do that with you.
-- Tech Stack logos: Python, MySQL, Excel, Power BI, Tableau, Google
-  Workspace, Jupyter, Looker Studio, Figma, Canva, AppSheet, and Apps
-  Script are your uploaded brand logo images. GitHub and LinkedIn tiles
-  use your uploaded/real icons too.
+<p align="center">Built with ❤️ by <a href="https://github.com/aniketac18">Aniket Chaware</a></p>
